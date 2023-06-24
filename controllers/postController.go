@@ -17,7 +17,6 @@ func CreatePosts(c *gin.Context) {
 
 	c.Bind(&body)
 
-
 	//create
 	post := models.Post{Title: body.Title, Body:body.Body}
 
@@ -43,5 +42,42 @@ func GetPosts(c *gin.Context) {
 	// return it
 	c.JSON(200, gin.H{
 		"posts": posts,
+	})
+}
+
+func GetPost(c *gin.Context) {
+
+	id := c.Param("id")
+
+	var post models.Post 
+
+	initializers.DB.First(&post, id)
+
+	// return it
+	c.JSON(200, gin.H{
+		"post": post,
+	})
+}
+
+func UpdatePost(c *gin.Context) {
+
+	id := c.Param("id")
+
+	// get req body
+	var body struct {
+		Title string
+		Body string
+	}
+
+	c.Bind(&body)
+
+	var post models.Post 
+	initializers.DB.First(&post, id)
+
+	initializers.DB.Model(&post).Updates(models.Post{Title: body.Title, Body: body.Body})
+
+	// return it
+	c.JSON(200, gin.H{
+		"post": post,
 	})
 }

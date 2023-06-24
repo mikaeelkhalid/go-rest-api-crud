@@ -17,6 +17,9 @@ func main() {
 
 	route.POST("/create", controllers.CreatePosts)
 	route.GET("/posts", controllers.GetPosts)
+	route.PUT("/post/:id", controllers.UpdatePost)
+	route.GET("/post/:id", controllers.GetPost)
+	
 	
 	route.Run() // listen and serve on 0.0.0.0:8080
 }
