@@ -1,5 +1,6 @@
-[![Mikaeel Khalid](https://badgen.now.sh/badge/by/mikaeelkhalid/purple)](#)
 # Go REST API CRUD
+
+[![Mikaeel Khalid](https://badgen.now.sh/badge/by/mikaeelkhalid/purple)](#)
 
 This repository contains a sample application for a RESTful API service using Go programming language. The API allows basic CRUD operations - Create, Read, Update, Delete - on a fictional data model.
 
