@@ -11,6 +11,8 @@ This repository contains a sample application for a RESTful API service using Go
 ├── initializers
 │   ├── LoadEnv.go
 |   ├── dbInit.go
+├── migrate
+│   ├── migrate.go
 ├── models
 │   ├── postModel.go
 ├── .env.sample.go
@@ -24,6 +26,7 @@ This repository contains a sample application for a RESTful API service using Go
 
 - `controllers`: Contains controller for post.
 - `initializers`: This directory contains the database connection and load envs.
+- `migrate`: This directory contains the migrate file.
 - `models`: This directory contains the data model.
 - `main.go`: This is the entry point of the service.
 
