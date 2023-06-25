@@ -63,6 +63,10 @@ DB_STRING=<your_database_url>
 
 ```bash
 go run main.go
+
+OR
+
+CompileDaemon -command="./m"
 ```
 
 The server will start on `localhost:{PORT}`.
